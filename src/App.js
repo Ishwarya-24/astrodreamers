@@ -1,22 +1,14 @@
 
+import React from 'react';
 import './App.css';
-import Header from './Header.js'
-import Hero from './Hero.js'
-import SubHero from './SubHero.js'
-import Features from './Features.js'
-import SubFeatures from './SubFeatures.js'
-import Footer from './Footer.js'
+import HomeScreen from './HomeScreen';
+
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Hero />
-      <SubHero />
-      <Features />
-      <SubFeatures />
-      <Footer />
-    </div>
+    <React.Fragment>
+     <HomeScreen />
+     </React.Fragment>
   );
 }
 
