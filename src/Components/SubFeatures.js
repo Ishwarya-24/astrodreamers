@@ -1,6 +1,6 @@
-import pythonImage from './python.jpeg'
-import phpImage from './php.png'
-import sqlImage from './sql.jpeg'
+import pythonImage from '../python.jpeg'
+import phpImage from '../php.png'
+import sqlImage from '../sql.jpeg'
 
 
 function SubFeatures() {

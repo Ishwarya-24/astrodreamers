@@ -1,73 +1,17 @@
 // Import package(s)
-var express = require('express');
-var server = express();
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var dotenv = require('dotenv');
-dotenv.config();
-
-var userRoutes = require('./routes/user-routes.js');
-var productRoutes = require('./routes/product-routes.js');
-var studentRoutes = require('./routes/student-routes.js');
-
-
-// Connect to MongoDB
-var dbURL = process.env.DB_URL;
-
-var dbConfig = {
-    "useNewUrlParser": true,
-    "useUnifiedTopology": true
-}
-
-mongoose
-.connect(dbURL, dbConfig)
-.then(
-    function() {
-        console.log("Database is connected");
-    }
-)
-.catch(
-    function(dbError) {
-        console.log('Database connection error', dbError)
-    }
-);
-
-
-// Configure middlewares for express
-var bodyParserConfig = {extended: false};
-server.use( bodyParser.urlencoded(bodyParserConfig) );
-server.use( bodyParser.json() );
-
-
-// Create routes
-server.get(
-    '/',                                        // http://localhost:3001/
-    function(req, res) {
-        res.send("<h1>Welcome to my app!</h1>");
-    }
-);
-
-server.use(
-    '/users', userRoutes
-);
-
-server.use(
-    '/products', productRoutes
-);
-
-server.use(
-    '/students', studentRoutes
-);
-
-
-
-
-
-
-// Listen to port number
-server.listen(
-    process.env.PORT,
-    function() {
-        console.log('Server running at http://localhost:3001/');
-    }
-);
+const express = require('express');
+const favicon = require('express-favicon');
+const path = require('path');
+const port = process.env.PORT || 3012;
+const app = express();
+app.use(favicon(__dirname + '/build/favicon.ico'));
+// the __dirname is the current directory from where the script is running
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/ping', function (req, res) {
+ return res.send('pong');
+});
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+app.listen(port);
