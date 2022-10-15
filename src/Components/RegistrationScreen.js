@@ -102,6 +102,7 @@ function RegistrationScreen() {
                     if(jsonResponse.status === "ok") {
                         console.log('backend response /users/register', jsonResponse)
                         setFormState("success");
+                        setTimeout(RegisterSuccess, 2000);
                     }
                     else {
                         setFormState("backend error");
@@ -121,6 +122,11 @@ function RegistrationScreen() {
     function addListItem(str) {
         return <li>{str}</li>
     }
+
+    function RegisterSuccess () {
+        window.location.assign('/')
+    }
+
 
     return (
         <Container maxWidth="sm">
