@@ -15,10 +15,12 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { UserContext } from '../UserContext'
 
+
+
 const forms = ['Login','Register']
 const fPaths = ['/login', '/registration']
-const pages = ['Home','About','Contact' ];
-const paths = ['/','/about','/contact' ];
+const pages = ['Home','About','Contact','Docs' ];
+const paths = ['/','/about','/contact','/Docs' ];
 
 const settings = ['Profile', 'Logout'];
 const settingsPath = ['/profile']

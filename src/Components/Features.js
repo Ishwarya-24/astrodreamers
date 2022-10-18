@@ -1,4 +1,4 @@
-
+import { Link as LinkComponent } from 'react-router-dom';
 
 function Features() {
     return(

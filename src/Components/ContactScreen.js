@@ -22,7 +22,7 @@ import Container from '@mui/material/Container';
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
           {'easylearning@gmail.com'}<br></br>
-          {'0456889759/0564567788'}
+          {'0456889759 / 0564567788'}
         </Typography>
         
       </Container>
@@ -50,4 +50,3 @@ import Container from '@mui/material/Container';
 }
 
 export default ContactScreen;
-

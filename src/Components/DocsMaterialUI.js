@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Navigator from "./ContentNavigator";
-import ContentMUI from "./ContentMUI";
+import Content from "./ContentMUI";
 import Header from "./ContentHeader";
 import { width } from "@mui/system";
 import RightNavbar from "./RightNavbar";
@@ -57,7 +57,7 @@ let theme = createTheme({
 
 const drawerWidth = 300;
 
-export default function Paperbase() {
+export default function DocsMaterialUI() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const isSmUp = useMediaQuery(theme.breakpoints.up(" md "));
 
@@ -139,7 +139,7 @@ export default function Paperbase() {
              <RightNavbar></RightNavbar>
             </Box>
 
-            <ContentMUI />
+            <Content />
           </Box>
         </Box>
       </Box>

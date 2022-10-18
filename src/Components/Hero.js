@@ -1,4 +1,4 @@
-
+import { Link as LinkComponent } from 'react-router-dom';
 
 function Hero () {
     return(
@@ -8,7 +8,7 @@ function Hero () {
           <div className="col-lg-6 mx-auto">
             <p className="fs-4 mb-4">Grow your career with best in class courses..</p>
             <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <button type="button" className="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Get Started</button>
+              <LinkComponent to="/docs" type="button" className="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Get Started</LinkComponent>
     
             </div>
           </div>

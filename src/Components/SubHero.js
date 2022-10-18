@@ -1,4 +1,4 @@
-
+import { Link as LinkComponent } from 'react-router-dom';
 
 function SubHero() {
     return(
@@ -11,8 +11,8 @@ function SubHero() {
               <h1 class="display-4 fw-bold lh-1 mb-3">REAL CODING PROJECTS</h1>
               <p class="lead">Our courses are specifically designed to make you build real-life projects from start to finish. We also provide certificate for the same.</p>
               <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btn-info btn-lg px-4 me-md-2">View all our courses</button>
-                <button type="button" class="btn btn-info btn-lg px-4 me-md-2">Try for free</button>
+                <LinkComponent to='/Docs' type="button" class="btn btn-info btn-lg px-4 me-md-2">View all our courses</LinkComponent >
+                <LinkComponent  to='/Docs' type="button" class="btn btn-info btn-lg px-4 me-md-2">Try for free</LinkComponent >
                 
               </div>
             </div>

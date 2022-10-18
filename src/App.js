@@ -8,6 +8,10 @@ import LayoutRoute from './Components/LayoutRoute';
 import PrivateLayoutRoute from './Components/PrivateLayoutRoute';
 import LoginScreen from './Components/LoginScreen';
 import ContactScreen from './Components/ContactScreen';
+import Docs from './Components/Docs';
+import ContentLayoutRoute from './Components/ContentLayoutRoute';
+import DocsMain from './Components/DocsMain';
+
 
 import {UserContext} from './UserContext';
 
@@ -67,6 +71,8 @@ function App() {
             <LayoutRoute path="/registration" component={RegistrationScreen} exact={true} />
             <LayoutRoute path="/login" component={LoginScreen} exact={true} />
             <LayoutRoute path="/contact" component={ContactScreen} exact={true} />
+            <ContentLayoutRoute path="/doc" component={Docs} exact={true} />
+            <ContentLayoutRoute path="/docs" component={DocsMain} exact={true} />
           </Switch>
       </BrowserRouter>
   );
